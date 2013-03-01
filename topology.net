@@ -82,8 +82,10 @@ version = 0.8.3.1
     [[ETHSW SW3]]
         1 = access 1 R3 f3/0
         2 = access 1 R4 f3/0
-        x = -60.6938674518
-        y = 57.5391052434
+        3 = access 1 DC4 e2
+        4 = access 1 DC5 e2
+        x = -64.6938674518
+        y = 29.5391052434
         z = 1.0
     [[ETHSW SW4]]
         1 = access 1 R1 f0/0
@@ -126,12 +128,26 @@ version = 0.8.3.1
     [[VBoxDevice]]
         image = DC1
         nics = 2
+    [[VBOX DC5]]
+        image = DC5
+        e2 = SW3 4
+        symbol = server
+        x = -7.5
+        y = 138.5
+        z = 1.0
     [[VBOX DC3]]
         image = DC3
         e2 = SW2 2
         symbol = server
         x = 556.5
         y = -109.5
+        z = 1.0
+    [[VBOX DC4]]
+        image = DC4
+        e2 = SW3 3
+        symbol = server
+        x = -146.5
+        y = 131.5
         z = 1.0
     [[VBOX DC2]]
         image = DC2
@@ -238,15 +254,25 @@ version = 0.8.3.1
         y = -367.674710937
     [[NOTE 22]]
         text = "e2"
+        x = -3.36797496907
+        y = -7.0135637006
+        interface = DC5 e2
+    [[NOTE 23]]
+        text = "e2"
+        x = 52.1858656564
+        y = 5.62972388672
+        interface = DC4 e2
+    [[NOTE 24]]
+        text = "e2"
         x = -15.4998836809
         y = 34.4035349081
         interface = DC3 e2
-    [[NOTE 23]]
+    [[NOTE 25]]
         text = "e2"
         x = 70.4999099351
         y = 36.4151166239
         interface = DC2 e2
-    [[NOTE 24]]
+    [[NOTE 26]]
         text = "e2"
         x = 31.5575320957
         y = 69.4888953867
@@ -258,122 +284,146 @@ version = 0.8.3.1
         hx = 3.86038969321
         hy = -26.4142135624
         z = 1.0
-    [[NOTE 25]]
+    [[NOTE 27]]
         text = "2"
         x = 36.4424679043
         y = -23.9888953867
         interface = SW4 2
-    [[NOTE 26]]
+    [[NOTE 28]]
         text = "1"
         x = 33.3688241029
         y = 55.943185768
         interface = SW4 1
-    [[NOTE 27]]
+    [[NOTE 29]]
+        text = "4"
+        x = 57.7943799753
+        y = 49.2108509605
+        interface = SW3 4
+    [[NOTE 30]]
+        text = "3"
+        x = 7.81413434362
+        y = 44.8702761133
+        interface = SW3 3
+    [[NOTE 31]]
         text = "2"
         x = 57.412813584
         y = -17.4638401985
         interface = SW3 2
-    [[NOTE 28]]
+    [[NOTE 32]]
         text = "1"
         x = 12.2766028803
         y = -16.5679877521
         interface = SW3 1
-    [[NOTE 29]]
+    [[NOTE 33]]
         text = "2"
         x = 75.4998836809
         y = 16.0964650919
         interface = SW2 2
-    [[NOTE 30]]
+    [[NOTE 34]]
         text = "1"
         x = -16.4783498226
         y = 16.3158820097
         interface = SW2 1
-    [[NOTE 31]]
+    [[NOTE 35]]
         text = "2"
         x = -4.49990993505
         y = 16.0848833761
         interface = SW1 2
-    [[NOTE 32]]
+    [[NOTE 36]]
         text = "1"
         x = 75.4809699984
         y = 17.2337090363
         interface = SW1 1
-    [[NOTE 33]]
+    [[NOTE 37]]
         text = "f1/0"
         x = 72.9783498226
         y = 20.6841179903
         interface = R5 f1/0
-    [[NOTE 34]]
+    [[NOTE 38]]
         text = "f0/0"
         x = -26.0
         y = 27.0
         interface = R5 f0/0
-    [[NOTE 35]]
+    [[NOTE 39]]
         text = "f3/0"
         x = 11.087186416
         y = 55.4638401985
         interface = R4 f3/0
-    [[NOTE 36]]
+    [[NOTE 40]]
         text = "f2/0"
         x = -29.0
         y = 21.0
         interface = R4 f2/0
-    [[NOTE 37]]
+    [[NOTE 41]]
         text = "f1/0"
         x = 73.0
         y = 22.0
         interface = R4 f1/0
-    [[NOTE 38]]
+    [[NOTE 42]]
         text = "f0/0"
         x = 13.1930098776
         y = -27.6881336661
         interface = R4 f0/0
-    [[NOTE 39]]
+    [[NOTE 43]]
         text = "f3/0"
         x = 56.2233971197
         y = 54.5679877521
         interface = R3 f3/0
-    [[NOTE 40]]
+    [[NOTE 44]]
         text = "f2/0"
         x = 73.0
         y = 22.0
         interface = R3 f2/0
-    [[NOTE 41]]
+    [[NOTE 45]]
         text = "f1/0"
         x = -28.0
         y = 29.0
         interface = R3 f1/0
-    [[NOTE 42]]
+    [[NOTE 46]]
         text = "f0/0"
         x = 56.082747654
         y = -10.6678245486
         interface = R3 f0/0
-    [[NOTE 43]]
+    [[NOTE 47]]
         text = "f1/0"
         x = -17.9809699984
         y = 33.7662909637
         interface = R2 f1/0
-    [[NOTE 44]]
+    [[NOTE 48]]
         text = "f0/0"
         x = 73.0
         y = 22.0
         interface = R2 f0/0
-    [[NOTE 45]]
+    [[NOTE 49]]
         text = "f0/0"
         x = 35.1311758971
         y = -17.943185768
         interface = R1 f0/0
-    [[NOTE 46]]
+    [[NOTE 50]]
         text = "f2/0"
         x = 40.8069901224
         y = 61.6881336661
         interface = R1 f2/0
-    [[NOTE 47]]
+    [[NOTE 51]]
         text = "f1/0"
         x = -7.08274765403
         y = 59.6678245486
         interface = R1 f1/0
     [[SHAPE 1]]
+        type = ellipse
+        x = -52.0
+        y = 38.0
+        width = 171.0
+        height = 173.0
+        border_style = 2
+    [[SHAPE 2]]
+        type = ellipse
+        x = -208.0
+        y = -98.0
+        width = 347.0
+        height = 354.0
+        border_style = 2
+    [[SHAPE 3]]
         type = ellipse
         x = 268.0
         y = -173.0
@@ -381,7 +431,7 @@ version = 0.8.3.1
         height = 200.0
         border_style = 2
         z = -1.0
-    [[SHAPE 2]]
+    [[SHAPE 4]]
         type = ellipse
         x = -726.0
         y = -175.0
@@ -389,7 +439,7 @@ version = 0.8.3.1
         height = 200.0
         border_style = 2
         z = -1.0
-    [[SHAPE 3]]
+    [[SHAPE 5]]
         type = ellipse
         x = -259.508188695
         y = -494.974746831
